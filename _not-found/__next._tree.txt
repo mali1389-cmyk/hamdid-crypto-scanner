@@ -1,2 +1,2 @@
-:HL["/hamdid-crypto-scanner/_next/static/chunks/422zjng2dkiep.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"MTy2P7rSLVsC8t0M8R1YC"}
+:HL["/_next/static/chunks/422zjng2dkiep.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"RMODZHszd4zXqnw5apONJ"}
