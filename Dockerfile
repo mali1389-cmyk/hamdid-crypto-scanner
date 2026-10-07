@@ -1,5 +1,12 @@
-FROM ghcr.io/static-web-server/static-web-server:2-alpine
+FROM ghcr.io/oven-sh/bun:1-alpine
 
-COPY --chown=1000:1000 . /home/sws/public
+WORKDIR /app
+
+COPY . /app/public
+COPY server.ts /app/server.ts
 
 EXPOSE 80
+
+ENV PORT=80
+
+CMD ["bun", "run", "/app/server.ts"]
