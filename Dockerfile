@@ -2,15 +2,14 @@ FROM ghcr.io/static-web-server/static-web-server:2-alpine
 
 USER root
 
-RUN apk add --no-cache nodejs
-
 WORKDIR /app
 
 COPY . /app/public
-COPY server.mjs /app/server.mjs
+COPY caddy /app/caddy
+COPY Caddyfile /app/Caddyfile
 
 EXPOSE 80
 
-ENV PORT=80
+ENTRYPOINT ["/app/caddy"]
 
-CMD ["node", "/app/server.mjs"]
+CMD ["run", "--config", "/app/Caddyfile", "--adapter", "caddyfile"]
