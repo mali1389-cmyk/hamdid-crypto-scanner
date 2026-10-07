@@ -1,12 +1,16 @@
-FROM ghcr.io/oven-sh/bun:1-alpine
+FROM ghcr.io/static-web-server/static-web-server:2-alpine
+
+USER root
+
+RUN apk add --no-cache nodejs
 
 WORKDIR /app
 
 COPY . /app/public
-COPY server.ts /app/server.ts
+COPY server.mjs /app/server.mjs
 
 EXPOSE 80
 
 ENV PORT=80
 
-CMD ["bun", "run", "/app/server.ts"]
+CMD ["node", "/app/server.mjs"]
