@@ -2,23 +2,12 @@
     encode zstd gzip
 
     handle_path /binance-spot/* {
-        reverse_proxy https://data-api.binance.vision {
+        reverse_proxy https://andicator-binance-relay.netlify.app {
             header_up Host {upstream_hostport}
             header_down Cache-Control "no-store"
             transport http {
                 dial_timeout 8s
-                response_header_timeout 12s
-            }
-        }
-    }
-
-    handle_path /binance-futures/* {
-        reverse_proxy https://fapi.binance.com {
-            header_up Host {upstream_hostport}
-            header_down Cache-Control "no-store"
-            transport http {
-                dial_timeout 8s
-                response_header_timeout 12s
+                response_header_timeout 15s
             }
         }
     }
